@@ -1,0 +1,78 @@
+.button {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 18px 24px;
+	font-weight: 500;
+	border-radius: 60px;
+	transition: background-color 0.3s ease 0s;
+	font-size: 15px;
+	overflow: hidden;
+}
+
+.button span {
+	position: relative;
+	z-index: 1;
+}
+
+.button::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.3s ease 0s;
+	transform: translateY(-110%);
+	border-radius: 8px;
+}
+
+.button--accent {
+	color: #fff;
+	background: var(--gradient-accent);
+}
+
+.button--accent::before {
+	background-color: #ff8000;
+}
+
+.button--accent:hover::before {
+	transform: translateY(0);
+}
+
+.button--blue {
+	color: #fff;
+	background-color: var(--blue-color);
+}
+
+.button--blue:hover {
+	background-color: #006e7a; /* darken(#028a98, 10%) approximation */
+}
+
+.button--white {
+	background-color: #fff;
+	box-shadow: 0 0 3px rgba(209, 214, 219, 1);
+}
+
+.button--white:hover {
+	background-color: var(--blue-color);
+	color: #fff !important;
+}
+
+.button--green {
+	color: #fff;
+	background: linear-gradient(260deg, #1fb45a 28%, #18be5a 40%, #0ae763 100%);
+}
+
+.button--green::before {
+	background-color: var(--blue-color);
+}
+
+.button--green:hover::before {
+	transform: translateY(0);
+}
+
+.button:hover::before {
+	transform: translateY(0);
+}

@@ -1,0 +1,15 @@
+.scroll-bar::-webkit-scrollbar {
+	width: 7px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+	background: #e0e0e0;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+	background: var(--gradient-accent);
+}
+
+.scroll-bar--mini::-webkit-scrollbar {
+	width: 3px;
+}

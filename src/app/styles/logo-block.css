@@ -1,0 +1,104 @@
+.logo-block {
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+	z-index: 2;
+	transition: all 0.3s ease 0s;
+}
+
+.logo-block__logo-img {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.logo-block__logo-img b {
+	width: 1px;
+	height: 43px;
+	background-color: #b1b9c2;
+	border-radius: 10px;
+}
+
+.logo-block__logo-img img {
+	width: 70px;
+	height: 70px;
+	object-fit: contain;
+}
+
+.logo-block span {
+	color: #4d5561;
+}
+
+.logo-block__text {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.logo-block__text span,
+.logo-block__text address {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	font-style: normal;
+}
+
+.logo-block__text address {
+	position: relative;
+}
+
+.logo-block__text address .tooltip {
+	position: absolute;
+	bottom: -35px;
+	left: 50%;
+	transform: translateX(-50%); /* Center the tooltip horizontally */
+	width: auto;
+	padding: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease 0s;
+	background-color: var(--black-color); /* Assuming --black-color is defined */
+	border-radius: 10px;
+	font-size: 14px;
+	white-space: nowrap;
+	color: #fff;
+}
+
+.logo-block__text address:hover .tooltip {
+	visibility: visible;
+	opacity: 1;
+	font-size: 12px;
+}
+
+.logo-block__text svg {
+	width: 20px;
+	height: 20px;
+	fill: var(--blue-color); /* Assuming --blue-color is defined */
+}
+
+/* Media Queries */
+@media (max-width: 479.98px) {
+	.logo-block__logo-img {
+		gap: 10px;
+	}
+}
+
+@media (max-width: 374.98px) {
+	.logo-block__logo-img img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.logo-block span {
+		font-size: 12px;
+	}
+	.logo-block__text {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.logo-block__text {
+		font-size: 14px;
+	}
+}

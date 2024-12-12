@@ -1,0 +1,102 @@
+.teamTabsCard {
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	box-shadow: 0 0 5px #d1d5db;
+	overflow: hidden;
+	padding-bottom: 32px;
+
+	// .team-tabs-card__image
+
+	.image {
+		display: block;
+		max-height: 300px;
+		height: 100%;
+		width: 100%;
+
+		background-color: #97d2dd;
+		overflow: hidden;
+		object-fit: contain;
+
+		@media (max-width: 375px) {
+			height: 200px;
+		}
+	}
+
+	// .team-tabs-card__description
+
+	.description {
+		padding: 24px 32px;
+	}
+
+	// .team-tabs-card__name
+
+	.name {
+		margin-bottom: 15px;
+		font-size: 17px;
+		font-weight: 600;
+		color: #000;
+	}
+
+	// .team-tabs-card__post
+
+	.post {
+		margin-bottom: 20px;
+		font-size: 15px;
+		line-height: 120%;
+	}
+
+	// .team-tabs-card__experience
+
+	.experience {
+		font-size: 15px;
+		span {
+			font-weight: 600;
+			color: #111827;
+		}
+	}
+
+	// .team-tabs-card__bottom
+
+	.bottom {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		gap: 15px;
+		padding: 0 32px;
+		margin-top: auto;
+	}
+
+	// .team-tabs-card__button
+
+	.button {
+	}
+
+	// .team-tabs-card__link
+
+	.link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		color: #4d5561;
+		font-size: 15px;
+		transition: color 0.3s ease 0s;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: #4d5561;
+			transition: fill 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--accent-color);
+				svg {
+					fill: var(--accent-color);
+				}
+			}
+		}
+	}
+}

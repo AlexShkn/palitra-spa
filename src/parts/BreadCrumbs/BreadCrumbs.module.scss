@@ -1,0 +1,61 @@
+.breadCrumbs {
+	margin-top: 40px;
+	z-index: 2;
+	position: relative;
+}
+
+.breadCrumbs.fixed {
+	position: absolute;
+	top: 30px;
+	margin-top: 0;
+}
+
+.breadCrumbsContainer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.breadCrumbsContainer span {
+	color: var(--blue-color);
+	font-weight: 500;
+}
+
+.breadCrumbsLink {
+	position: relative;
+}
+
+.breadCrumbsLink svg {
+	width: 20px;
+	height: 20px;
+	fill: var(--main-color);
+	transition: fill 0.3s ease;
+}
+.breadCrumbsLink:hover svg {
+	fill: var(--accent-color);
+}
+
+.breadCrumbsLink:hover {
+	color: var(--accent-color);
+	transition: color 0.3s ease 0s;
+}
+
+.breadCrumbsLink:not(:first-child)::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -25px;
+	transform: translateY(-50%);
+	display: inline-block;
+	background-image: url('/assets/img/icons/arrow.svg');
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 16px;
+	height: 16px;
+	margin: 0 8px;
+}
+
+.breadCrumbsLink.hidden {
+	display: none;
+}
